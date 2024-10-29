@@ -58,10 +58,10 @@ document.getElementById('applicationForm').addEventListener('submit', async (e) 
             }
         );
         
-        showToast('Application submitted! 💘', 'success');
+        showToast('Application submitted! ', 'success');
         e.target.reset();
     } catch (error) {
-        showToast('Oops! Something went wrong 💔', 'error');
+        showToast('Oops! Something went wrong ', 'error');
         console.error('EmailJS error:', error);
     }
 });
