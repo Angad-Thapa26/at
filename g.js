@@ -52,7 +52,6 @@ document.getElementById('applicationForm').addEventListener('submit', async (e) 
                     Age: ${data.age}
                     Address: ${data.address}
                     Contact: ${data.contact}
-                    Hobby: ${data.hobby}
                     Instagram: ${data.instagram}
                     Description: ${data.description}
                 `
