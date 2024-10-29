@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("QwPYWwXX__L0Pdqt2");
 })();
 
 // Create floating hearts
