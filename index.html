@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girlfriend Application Form</title>
+    <link rel="stylesheet" href="g.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="hearts-container"></div>
+        
+        <div class="form-container">
+            <div class="header"> 
+                <h1>Girlfriend Application Form</h1>    
+            </div>
+            <form id="applicationForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            required 
+                            placeholder="Your lovely name"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Age *</label>
+                        <input 
+                            type="number" 
+                            name="age" 
+                            required 
+                            placeholder="Your age "
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <input 
+                        type="text" 
+                        name="address" 
+                        placeholder="Where can we find you? 🗺️"
+                    >
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input 
+                            type="tel" 
+                            name="contact" 
+                            placeholder="Your digits 📱"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Instagram ID</label>
+                        <input 
+                            type="text" 
+                            name="instagram" 
+                            placeholder="@your.insta.handle"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Hobbies</label>
+                    <input 
+                        type="text" 
+                        name="hobby" 
+                        placeholder="What makes you fun? 🎨"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Tell us about yourself</label>
+                    <textarea 
+                        name="description" 
+                        rows="4" 
+                        placeholder="Why would you be the perfect match? Be creative! 💭"
+                    ></textarea>
+                </div>
+
+                <button type="submit">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m22 2-7 20-4-9-9-4Z"/>
+                        <path d="M22 2 11 13"/>
+                    </svg>
+                    Submit Application
+                </button>
+            </form>
+
+            <p class="disclaimer">
+                * By submitting this form, you acknowledge that you are a girl <br>
+                ©2024 Angad thapa and ⚡
+            </p>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="g.js"></script>
+</body>
+</html>
