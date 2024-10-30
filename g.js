@@ -38,6 +38,12 @@ function showToast(message, type) {
 document.getElementById('applicationForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    
+    // Disable the submit button to prevent multiple submissions
+    submitButton.disabled = true;
+    submitButton.innerHTML = 'Submitting...'; // Optional: Change button text
+
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     
@@ -58,11 +64,15 @@ document.getElementById('applicationForm').addEventListener('submit', async (e) 
             }
         );
         
-        showToast('Application submitted! ', 'success');
+        showToast('Application submitted!', 'success');
         e.target.reset();
     } catch (error) {
-        showToast('Oops! Something went wrong ', 'error');
+        showToast('Oops! Something went wrong.', 'error');
         console.error('EmailJS error:', error);
+    } finally {
+        // Re-enable the button if needed or keep it disabled
+        // submitButton.disabled = false; // Uncomment if you want to allow resubmission
+        submitButton.innerHTML = 'Submit Application'; // Change button text back if needed
     }
 });
 
